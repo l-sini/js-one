@@ -1,0 +1,45 @@
+div {
+    border: 1px double palevioletred;
+    width: 4%;
+    height: 4%;
+    
+    
+}
+
+#one {
+    background-color: peru;
+    
+    
+}
+
+#two {
+    background-color: rebeccapurple;
+    position: sticky; top: 0;
+    
+   
+}
+
+#three {
+    background-color: royalblue;
+    position: fixed; top: 10%; left: auto; right: auto; bottom: 10%;
+        
+    
+
+}
+
+#four {
+    background-color: springgreen;
+    width: 300px;
+}
+
+#five {
+    background-color: silver;
+}
+
+body {
+    width : 400%;
+    height : 800%;
+    background-color: slategrey;
+   
+    
+}

@@ -1,0 +1,138 @@
+body {
+  background-color: lightyellow;
+}
+
+.navi {
+  background-color: lightpink;
+  color: brown;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 4%;
+  margin: 2%;
+  border: 1px double red;
+}
+
+#float {
+  padding: 2%;
+  background-color: darkkhaki;
+  margin: 1%;    
+}
+
+#shape {
+    padding: 2%;
+    background-color: lightseagreen;
+    margin: 1%;
+}
+
+#position {
+    padding: 2%;
+    background-color: mediumpurple;
+    margin: 1%;
+}
+
+.navi2 {
+  position: relative;
+  margin-top: 9%;
+  }
+  
+  #one {
+  background-color: black;
+  padding: 50px;
+  position: fixed; width: 80.7%;
+  
+  
+  }
+
+  #two {
+  background-color: blue;
+  padding: 50px;
+  
+  }
+  
+  #three {
+  background-color: green;
+  padding: 50px;
+  }
+  
+  #four {
+  background-color: red;
+  padding: 50px;
+  }
+  
+  #five {
+  background-color: gray;
+  padding: 50px;
+  }
+
+/* shape */
+
+.explain {
+  background-color: lightpink;
+  margin-bottom: 3%;
+}
+
+.test {
+  border: 1px solid grey;
+  background-color: lightgreen;
+  color: gray;
+  text-align: center;
+  font-size: 2rem;
+  float: right; 
+  position: relative;
+  top :
+}
+
+.test2 {
+  float: right; 
+  
+}
+
+.test3 {
+    float: right; margin: 1px 1px 1px 1px; /* margin에 따른 변화 확인가능 */
+    clear: right; /* clear의 유무에 따라 위치 변화 확인 가능 */
+    
+}
+
+.test4 {
+    float: left;
+    shape-outside: circle(400% at center); /* shape의 circle을 이용시 최 */
+    
+}
+
+.test5 {
+    float: left;
+    shape-outside: ellipse(100% 33% at center left);
+}
+
+.test6 {
+    float: left; /* margin-top: 5px; */
+    shape-outside: polygon(50% 0, 100% 45%, 100% 75%, 50% 100%, 0 75%, 0 25%) /* nonzero evenodd */ 
+}
+
+.test7 {
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

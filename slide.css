@@ -1,0 +1,52 @@
+
+    
+    .navi {
+        background-color: lightpink;
+        color: brown;
+        text-align: center;
+        font-size: 1.5em;
+        border: 1px double red;
+        height: 5000px;
+        width: auto;
+    }
+
+
+    #one {
+        background-image: url('file:///Users/sini/Downloads/kaboompics_woman%20writes%20in%20her%20notebook.jpg'); height: 300px; width: 500px;
+        position: fixed;
+        /* margin-left: 50px; */
+        /* z-index: 100; */
+  
+    }
+
+    .navi2 {
+        /* position: relative; */
+        margin-top: 300px;
+        /* padding: 50px; */
+        z-index: 101;
+    }
+  
+    #two {
+        background-color: blue; height: 300px; width: 500px;
+        position: sticky; 
+        
+    }
+    
+    #three {
+        background-color: green; height: 300px; width: 500px;
+        position: relative;
+    
+    }
+    
+    #four {
+        background-color: red; height: 300px; width: 500px;
+        position: absolute;
+  
+    }
+    
+    #five {
+        background-color: gray; height: 300px; width: 500px;
+    
+    }
+
+  

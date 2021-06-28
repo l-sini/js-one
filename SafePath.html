@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>SafePath</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+
+<!-- font-awesome -->
+<link rel="stylesheet" type="text/css" href="./SafePath_files/font-awesome.min.css">
+<link rel="stylesheet" href="./SafePath_files/jquery.mobile-1.4.5.min.css">
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="./SafePath_files/reset.css">
+<link rel="stylesheet" type="text/css" href="./SafePath_files/content.css">
+<!-- jquery -->
+<script src="./SafePath_files/jquery.min.js"></script>
+<script src="./SafePath_files/jquery-ui.min.js"></script>
+<script src="./SafePath_files/jquery.simple-sidebar.min.js"></script>
+
+<!-- js -->
+<script src="./SafePath_files/safepath.js"></script>
+<script type="text/javascript">
+
+<!--
+let frm;
+const pwpattern1 = /[0-9]/;
+const pwpattern2 = /[a-zA-Z]/;
+const pwpattern3 = /[~!@#$%<>^&*]/;
+
+const regexp_1 = /^[A-za-z]{4,15}/g;
+const regexp_2 = /^[a-z0-9_]{4,20}$/;
+
+function onInit() {
+	frm = document.form1;
+	onChange('','');
+}
+
+function onNum(){
+	if( ( (96<=event.keyCode) && (event.keyCode<=105) ) || ( (48<=event.keyCode) && (event.keyCode<=57) ) || (event.keyCode==8) || (event.keyCode==37) || (event.keyCode==39) || (event.keyCode==9)){
+		event.returnValue=true;
+	} else {
+		event.returnValue=false;
+	}
+}
+
+ function onChange(money, value){
+//	 alert($("#total_money").text());
+//	 var tmoney = money * value + parseInt($("#total_money").text());
+//	 document.getElementById("total_money").innerHTML = tmoney;
+	var tmoney = $("#dress01").val() * 1000 +
+	$("#dress02").val() * 3000 +
+	$("#dress03").val() * 13000 +
+	$("#dress04").val() * 15000 +
+	$("#dress05").val() * 12000 +
+	$("#dress06").val() * 15000 +
+	$("#dress07").val() * 20000 +
+	$("#dress08").val() * 50000;
+	$("#total_money").html(Format_comma(tmoney));
+	$("#price").val(tmoney);
+ }
+
+function Format_comma(val1){
+	var newValue = val1+""; //숫자를 문자열로 변환
+	var len = newValue.length; 
+	var ch="";
+	var j=1;
+	var formatValue="";
+
+	// 콤마제거 
+	newValue = newValue.replace(/\,/gi, ' ');
+
+	// comma제거된 문자열 길이
+	len = newValue.length;
+
+	for(i=len ; i>0 ; i--){
+		ch = newValue.substring(i-1,i);
+		formatValue = ch + formatValue;
+		if ((j%3) == 0 && i>1 ){
+			formatValue=","+formatValue;
+		}
+		j++;
+	}
+	return formatValue;
+}
+
+function goSave(){
+	if($("#price").val() <= 0){
+		alert("선택한 내용이 없습니다.");
+		return false;
+	}
+
+	if($('input:checkbox[id=agree]').is(":checked") == false) {
+		alert('약관에 동의해주세요.');
+		return false;
+	} 
+
+
+	document.payForm.submit();
+}
+
+function chatChannel(phonetype) {
+	/*Kakao.init('08198c0c505135f955c6e9890401bdd5')
+	Kakao.Channel.chat({
+		channelPublicId: '_xaxjhxmxb',
+    })
+	*/
+	if(phonetype=="2"){
+		location.href='intent://pf.kakao.com/_xaxjhxmxb/chat#Intent;scheme=http;package=com.android.chrome;end'
+	} else { 
+		location.href='http://sfpc.slight.co.kr/bridge.html?test=1234&name=1'
+		//alert("현재 아이폰은 사용하실수 없습니다.(마켓 심사중...)");
+	}
+ }
+
+function blogChannel(phonetype) {
+	/*Kakao.init('08198c0c505135f955c6e9890401bdd5')
+	Kakao.Channel.chat({
+		channelPublicId: '_xaxjhxmxb',
+    })
+	*/
+	if(phonetype=="2"){
+		location.href='intent://blog.naver.com/kwonyr0116#Intent;scheme=http;package=com.android.chrome;end'
+	} else { 
+		location.href='http://sfpc.slight.co.kr/bridge.html?test=1234&name=2'
+//		alert("현재 아이폰은 사용하실수 없습니다.");
+	}
+ }
+
+ $(window).load(function(){
+
+});
+ 
+
+function back_url() {
+	location.href="";
+}
+//-->
+</script>
+</head>
+
+<body onload="onInit()">
+<input type="hidden" name="alert_yn" id="alert_yn" value="N">
+
+<!-- header -->
+<header class="navbar navbar-fixed-top">
+    <h1><img src="./SafePath_files/logo.png"></h1>
+   
+</header>
+<!-- //header -->
+
+<!-- content -->
+
+<section id="content3">
+   <div class="main_banner">
+		<div class="bnr_box">
+			<a href="https://sfpc.slight.co.kr/service/service_apply.jsp"><img src="./SafePath_files/event_bnr01.png"></a>
+		</div>
+		<div class="bnr_box">
+			<a href="https://sfpc.slight.co.kr/event/event04.jsp"><img src="./SafePath_files/event_bnr04.png"></a>
+		</div>
+		<div class="bnr_box">
+			<a href="https://sfpc.slight.co.kr/event/event06.jsp"><img src="./SafePath_files/event_bnr06.png"></a>
+		</div>
+		<div class="bnr_box">
+			<a href="https://sfpc.slight.co.kr/event/event05.jsp"><img src="./SafePath_files/event_bnr05.png"></a>
+		</div>
+		<div class="bnr_box">
+			<a href="https://sfpc.slight.co.kr/event/event02.jsp"><img src="./SafePath_files/event_bnr02.png"></a>
+		</div>
+		<div class="bnr_box">
+			<a href="https://sfpc.slight.co.kr/event/event03.jsp"><img src="./SafePath_files/event_bnr03_ed.png"></a>
+		</div>
+		<div class="bnr_box_last">
+			<ul>
+				<li><a href="https://sfpc.slight.co.kr/#" onclick="chatChannel(&#39;&#39;);return false;"><span><img src="./SafePath_files/icon_ch.png"></span><span>카카오톡채널</span></a></li>
+				<li><a href="https://sfpc.slight.co.kr/#" onclick="blogChannel(&#39;&#39;);return false;"><span><img src="./SafePath_files/icon_naver.png"></span><span>네이버블로그</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="tel: 010-4022-1099"> <span><img src="./SafePath_files/icon_call.png"></span><span>고객센터</span></a></li>
+				<li><div id="test"></div></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- //content -->
+
+
+
+<div style="padding-top:70px"></div>
+<footer>
+	<div id="btm_menu">
+		<ul>
+			<li>
+			<a href="https://sfpc.slight.co.kr/login/login.jsp?version=5" class="btm_menu01r">
+			<p>
+			<span class="btm_on">홈</span></p></a></li>
+			<li>
+				<a href="https://sfpc.slight.co.kr/service/service_apply.jsp" class="btm_menu02">
+				<p>서비스신청</p></a></li>
+			<li>
+				<a href="https://sfpc.slight.co.kr/service_list/service_list2.jsp?gubun=2" class="btm_menu03">
+				<p>서비스/구매내역</p></a></li>
+		
+			<li><a href="https://sfpc.slight.co.kr/login/login_new.jsp" class="btm_menu04"><p>로그인</p></a></li>
+		
+		</ul>
+	</div>
+</footer>
+
+</body></html>
